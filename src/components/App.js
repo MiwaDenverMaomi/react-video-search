@@ -58,7 +58,7 @@ const App = () => {
   }
 
   const onClickSearch = async (term) => {
-    console.log(term);
+    // console.log(term);
 
     if (term) {
 
@@ -67,7 +67,7 @@ const App = () => {
           q: term,
         },
       }).then(res => {
-        console.log(res.data.items);
+        // console.log(res.data.items);
         let result = [];
         result = res.data.items.map(item => {
           let obj = {};
@@ -78,7 +78,7 @@ const App = () => {
             publishedAt: item.snippet.publishedAt
           }
         });
-        console.log(result);
+        // console.log(result);
         setResults(result);
       }).catch(() => {
         setResultMsg('Error occured.Reload the page and try again.');

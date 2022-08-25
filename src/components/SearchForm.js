@@ -4,7 +4,6 @@ const SearchForm = ({ onClickSearch }) => {
   const [term, setTerm] = useState('');
 
   const onClick = (e) => {
-    console.log('onClick');
     e.preventDefault();
     onClickSearch(term);
   };
